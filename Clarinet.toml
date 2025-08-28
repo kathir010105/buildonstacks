@@ -1,0 +1,37 @@
+[project]
+name = "micro-pension"
+description = "A non-custodial micro-pension system on Stacks"
+authors = ["Your Name"]
+license = "MIT"
+
+[contracts.pension]
+path = "contracts/pension.clar"
+depends_on = []
+
+[contracts.pension_test]
+path = "contracts/pension_test.clar"
+depends_on = ["pension"]
+
+[networks]
+[networks.devnet]
+name = "devnet"
+deployment_dir = "deployments/devnet"
+
+[networks.testnet]
+name = "testnet"
+deployment_dir = "deployments/testnet"
+
+[networks.mainnet]
+name = "mainnet"
+deployment_dir = "deployments/mainnet"
+
+[devnet]
+disable_stacks_explorer = false
+disable_stacks_api = false
+working_dir = "devnet"
+deployment_dir = "deployments/devnet"
+accounts = [
+  "ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5",
+  "ST2CY5V39NHDPWSXMW3Q6C4NCFS2W56CCMA6AWKWD",
+  "ST3AM1A963AKGJZ2Q9FJ2BFJ3T3K9F5Z4V62FZ6J"
+]
