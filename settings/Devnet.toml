@@ -1,0 +1,7 @@
+network = 'devnet'
+[devnet]
+enable_next_features = true
+epoch_2_0 = 100
+epoch_2_05 = 101
+epoch_2_1 = 102
+pox_2_activation = 103
